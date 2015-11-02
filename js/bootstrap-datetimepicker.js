@@ -319,7 +319,8 @@
     },
 
     toggle: function () {
-      if(this.element.data('isShowing') === 1){
+      console.log('isShowing', this.element.data('isShowing'))
+      if(this.element.data('isShowing')){
         this.isVisible = true;
         this.hide();
       }else{
@@ -330,7 +331,7 @@
     },
 
     show: function (e) {
-      this.element.data('isShowing', 1);
+      this.element.data('isShowing', true);
       this.picker.show();
       this.height = this.component ? this.component.outerHeight() : this.element.outerHeight();
       if (this.forceParse) {
@@ -350,7 +351,7 @@
     },
 
     hide: function (e) {
-      this.element.data('isShowing', 0);
+      this.element.data('isShowing', false);
       if (!this.isVisible) return;
       if (this.isInline) return;
       this.picker.hide();
