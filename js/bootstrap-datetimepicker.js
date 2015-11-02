@@ -318,6 +318,10 @@
       this._events = [];
     },
 
+    isVisible: function(){
+      return this.isVisible;
+    },
+
     show: function (e) {
       this.picker.show();
       this.height = this.component ? this.component.outerHeight() : this.element.outerHeight();
