@@ -318,8 +318,12 @@
       this._events = [];
     },
 
-    isVisibled: function() {
-      return this.isVisible;
+    toggle: function () {
+      if(this.isVisible){
+        this.hide();
+      }else{
+        this.show();
+      }
     },
 
     show: function (e) {
