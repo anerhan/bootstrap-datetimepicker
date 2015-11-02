@@ -319,7 +319,7 @@
     },
 
     toggle: function () {
-      if(this.isVisible){
+      if(this.isInline){
         this.hide();
       }else{
         this.show();
