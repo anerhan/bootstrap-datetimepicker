@@ -318,11 +318,11 @@
       this._events = [];
     },
 
-    toggle: function () {
-      if(this.isInline){
-        this.hide();
+    toggle: function (e) {
+      if(this.isVisible){
+         this.picker.hide();
       }else{
-        this.show();
+         this.picker.show();
       }
     },
 
