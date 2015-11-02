@@ -318,13 +318,13 @@
       this._events = [];
     },
 
-    toggle: function () {
+    togggle: function () {
       console.log('isShowing', this.element.data('isShowing'))
       if(this.element.data('isShowing')){
-        this.isVisible = true;
+        this.isVisible = false;
         this.hide();
       }else{
-        this.isVisible = false;
+        this.isVisible = true;
         this.show();
       }
       return this;
