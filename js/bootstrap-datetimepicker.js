@@ -318,8 +318,7 @@
       this._events = [];
     },
 
-    toggle: function (e) {
-      e.preventDefault();
+    toggle: function () {
       if(this.element.data('isShowing') === 1){
         this.hide();
       }else{
