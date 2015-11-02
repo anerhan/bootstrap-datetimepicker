@@ -319,14 +319,15 @@
     },
 
     toggle: function (e) {
-      if(this.isVisible){
-         this.picker.hide();
+      if(this.picker().data('show') === 1){
+         this.hide();
       }else{
-         this.picker.show();
+         this.show();
       }
     },
 
     show: function (e) {
+      this.picker().data('show', 1);
       this.picker.show();
       this.height = this.component ? this.component.outerHeight() : this.element.outerHeight();
       if (this.forceParse) {
@@ -346,6 +347,7 @@
     },
 
     hide: function (e) {
+      this.picker().data('show', 0);
       if (!this.isVisible) return;
       if (this.isInline) return;
       this.picker.hide();
