@@ -318,16 +318,19 @@
       this._events = [];
     },
 
-    toggle: function (e) {
-      if(this.element.data('show') === 1){
-         this.hide();
+    toggle: function () {
+      if(this.element.data('isShowing') === 1){
+        this.hide();
       }else{
-         this.show();
+        this.show();
       }
+      this.element.trigger({
+        type: 'toggle'
+      });
     },
 
     show: function (e) {
-      this.element.data('show', 1);
+      this.element.data('isShowing', 1);
       this.picker.show();
       this.height = this.component ? this.component.outerHeight() : this.element.outerHeight();
       if (this.forceParse) {
@@ -347,7 +350,7 @@
     },
 
     hide: function (e) {
-      this.element.data('show', 0);
+      this.element.data('isShowing', 0);
       if (!this.isVisible) return;
       if (this.isInline) return;
       this.picker.hide();
