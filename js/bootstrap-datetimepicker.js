@@ -320,8 +320,10 @@
 
     toggle: function () {
       if(this.element.data('isShowing') === 1){
+        this.isVisible = true;
         this.hide();
       }else{
+        this.isVisible = false;
         this.show();
       }
       return this;
