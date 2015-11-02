@@ -318,7 +318,7 @@
       this._events = [];
     },
 
-    isVisible: function(){
+    isVisibled: function() {
       return this.isVisible;
     },
 
