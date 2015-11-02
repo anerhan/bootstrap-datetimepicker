@@ -318,15 +318,14 @@
       this._events = [];
     },
 
-    toggle: function () {
+    toggle: function (e) {
+      e.preventDefault();
       if(this.element.data('isShowing') === 1){
         this.hide();
       }else{
         this.show();
       }
-      this.element.trigger({
-        type: 'toggle'
-      });
+      return this;
     },
 
     show: function (e) {
